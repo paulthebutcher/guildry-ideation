@@ -80,10 +80,14 @@ export default function HomePage() {
           Projects that get<br />smarter over time.
         </h1>
 
-        <p className="text-lg text-slate-600 max-w-2xl leading-relaxed mb-8">
+        <p className="text-lg text-slate-600 max-w-2xl leading-relaxed mb-4">
           A project intelligence platform for services firms. Scope work, staff teams,
           manage clients, and learn from every project — with a data flywheel that
           makes your next estimate more accurate than your last.
+        </p>
+
+        <p className="text-sm text-slate-500 max-w-2xl mb-8">
+          For agencies and freelancers tired of underquoting projects, scrambling to staff them, and forgetting what they learned. Your 10th project estimate is 40% more accurate than your 1st — because the system learns from every project you close.
         </p>
 
         <div className="flex gap-3 flex-wrap">
