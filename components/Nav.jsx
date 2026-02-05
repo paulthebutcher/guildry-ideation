@@ -10,6 +10,7 @@ const NAV_ITEMS = [
     label: "System",
     children: [
       { href: "/system/ai", label: "Conversational AI", desc: "How the AI layer works" },
+      { href: "/system/security", label: "Security", desc: "Data privacy & compliance" },
       { href: "/architecture", label: "Architecture", desc: "Repo structure & principles" },
       { href: "/data-model", label: "Data Model", desc: "17 entities, 7 layers" },
     ],

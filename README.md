@@ -7,6 +7,7 @@ Internal architecture documentation for the product platform. Built with Next.js
 - **/** — Overview: platform vision, product pipeline, key bets
 - **/products** — Individual product briefs with problem/solution/tech stack
 - **/system/ai** — Conversational AI system architecture
+- **/system/security** — Data security, privacy, and compliance planning
 - **/architecture** — Repo structure, design principles, technology decisions
 - **/data-model** — Interactive entity relationship map (17 entities, 7 layers)
 - **/roadmap** — 26-week phased implementation plan with validation gates
