@@ -122,7 +122,7 @@ function RelationshipList({ entity }) {
           return (
             <div key={i} className="flex items-center gap-2 text-[11px]">
               <span className="text-accent-blueprint font-mono">{entity.name}</span>
-              <span className="text-slate-400">—</span>
+              <span className="text-slate-400">-</span>
               <span className="text-slate-500 italic text-[10px]">{r.label}</span>
               <span className="text-slate-400">→</span>
               <span className="text-accent-compass font-mono">{otherEntity?.name || other}</span>
@@ -168,7 +168,7 @@ export default function DataModelPage() {
           Entity Relationship Map
         </h1>
         <p className="text-sm text-slate-600 max-w-xl">
-          Every entity is owned by one product but referenced by many — so they validate independently
+          Every entity is owned by one product but referenced by many, so they validate independently
           but combine without migration.
         </p>
 

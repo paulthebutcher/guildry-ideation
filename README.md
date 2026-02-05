@@ -4,15 +4,15 @@ Internal architecture documentation for the product platform. Built with Next.js
 
 ## Pages
 
-- **/** — Overview: platform vision, product pipeline, learning loop diagram, key bets
-- **/story** — Before & after narrative: week at an agency with/without Guildry
-- **/products** — Individual product briefs with problem/solution/tech stack
-- **/system/ai** — Conversational AI system architecture
-- **/system/security** — Data security, privacy, and compliance planning
-- **/architecture** — Repo structure, design principles, technology decisions
-- **/data-model** — Interactive entity relationship map (17 entities, 7 layers)
-- **/roadmap** — 26-week phased implementation plan with validation gates
-- **/challenges** — Design challenges and how we're solving them
+- **/** Overview: platform vision, product pipeline, learning loop diagram, key bets
+- **/story** Before & after narrative: week at an agency with/without Guildry
+- **/products** Individual product briefs with problem/solution/tech stack
+- **/system/ai** Conversational AI system architecture
+- **/system/security** Data security, privacy, and compliance planning
+- **/architecture** Repo structure, design principles, technology decisions
+- **/data-model** Interactive entity relationship map (17 entities, 7 layers)
+- **/roadmap** 26-week phased implementation plan with validation gates
+- **/challenges** Design challenges and how we're solving them
 
 ## Quick Start
 
@@ -38,7 +38,7 @@ vercel
 ### Option 2: Git Push
 1. Push this repo to GitHub
 2. Import at [vercel.com/new](https://vercel.com/new)
-3. Vercel auto-detects Next.js — zero config needed
+3. Vercel auto-detects Next.js (zero config needed)
 
 ## Adding Pages
 

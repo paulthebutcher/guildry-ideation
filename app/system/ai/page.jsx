@@ -133,7 +133,7 @@ export default function ConversationalAIPage() {
           Conversational AI System
         </h1>
         <p className="text-slate-600 leading-relaxed">
-          How the AI layer works across all Guildry products. Users don't fill forms — they talk to the system.
+          How the AI layer works across all Guildry products. Users don't fill forms. They talk to the system.
           The AI extracts structure from natural language, asks clarifying questions, and writes to the unified data model.
         </p>
       </div>
@@ -145,7 +145,7 @@ export default function ConversationalAIPage() {
         </h2>
         <p className="text-sm text-teal-700 m-0 leading-relaxed">
           Every product in Guildry shares the same conversational engine. The conversation <em>is</em> the interface.
-          This isn't a chatbot bolted onto a CRUD app — it's a fundamentally different interaction model where
+          This isn't a chatbot bolted onto a CRUD app. It's a fundamentally different interaction model where
           natural language is the primary input and structured data is the output.
         </p>
       </div>
@@ -183,7 +183,7 @@ export default function ConversationalAIPage() {
             </p>
             <div className="p-4 rounded-lg bg-slate-50 border border-slate-200">
               <p className="text-sm text-slate-600 m-0 mb-2 italic">
-                "I've got a new project with Acme Corp — it's a website redesign, probably 8-10 weeks."
+                "I've got a new project with Acme Corp. It's a website redesign, probably 8-10 weeks."
               </p>
               <div className="flex gap-4 text-xs text-slate-500 font-mono">
                 <span>Intent: <span className="text-teal-600">Create project scope</span></span>
@@ -197,16 +197,16 @@ export default function ConversationalAIPage() {
           <div>
             <h3 className="font-mono text-sm font-semibold text-slate-700 mb-2 mt-0">2. Guided Extraction</h3>
             <p className="text-sm text-slate-600 mb-3 leading-relaxed">
-              The AI knows the target schema and asks questions to fill it. Not a rigid form — a conversation that
+              The AI knows the target schema and asks questions to fill it. Not a rigid form, but a conversation that
               adapts based on what's already known.
             </p>
             <ConversationExample
               messages={[
-                { role: "ai", content: "Got it — website redesign for Acme Corp. What's driving the redesign? Performance issues, rebrand, or something else?" },
+                { role: "ai", content: "Got it. Website redesign for Acme Corp. What's driving the redesign? Performance issues, rebrand, or something else?" },
                 { role: "user", content: "Their site is slow and they just rebranded. Need to update the look and fix the tech debt." },
                 { role: "ai", content: "Makes sense. So we're looking at both visual refresh and performance work. What's their current stack? Or I can check their site if you give me the URL." },
                 { role: "user", content: "acmecorp.com" },
-                { role: "ai", content: "Found it. They're on WordPress with a heavy theme — Lighthouse perf score is 34. Accessibility has some issues too. Given the rebrand + tech debt, are you thinking fix-in-place or full rebuild?", action: "[runs site_audit tool]" },
+                { role: "ai", content: "Found it. They're on WordPress with a heavy theme. Lighthouse perf score is 34. Accessibility has some issues too. Given the rebrand + tech debt, are you thinking fix-in-place or full rebuild?", action: "[runs site_audit tool]" },
               ]}
             />
           </div>
@@ -225,7 +225,7 @@ export default function ConversationalAIPage() {
             <h3 className="font-mono text-sm font-semibold text-slate-700 mb-2 mt-0">4. Progressive Disclosure</h3>
             <p className="text-sm text-slate-600 mb-3 leading-relaxed">
               The AI doesn't ask for everything upfront. It gathers enough to be useful, then offers to go deeper.
-              User controls depth — quick estimate or full scope, same conversation, different exit points.
+              User controls depth. Quick estimate or full scope, same conversation, different exit points.
             </p>
             <ConversationExample
               messages={[
@@ -237,7 +237,7 @@ export default function ConversationalAIPage() {
 • Development: 160 hrs
 • QA + Launch: 60 hrs
 
-These are based on 4 similar redesigns you've done. The dev estimate assumes a React rebuild — if you're staying on WordPress, knock off about 30%.` },
+These are based on 4 similar redesigns you've done. The dev estimate assumes a React rebuild. If you're staying on WordPress, knock off about 30%.` },
               ]}
             />
           </div>
@@ -260,7 +260,7 @@ Phases: Discovery → Design → Development → QA/Launch
 
 I can also draft an SOW from this if you want.` },
                 { role: "user", content: "Save it and draft the SOW." },
-                { role: "ai", content: "Done. Here's the draft SOW — let me know if you want to adjust anything before sending.", action: "[creates Project, Phase[], RoleRequirement[] entities]\n[calls generate_document tool with SOW template]" },
+                { role: "ai", content: "Done. Here's the draft SOW. Let me know if you want to adjust anything before sending.", action: "[creates Project, Phase[], RoleRequirement[] entities]\n[calls generate_document tool with SOW template]" },
               ]}
             />
           </div>
@@ -330,12 +330,12 @@ I can also draft an SOW from this if you want.` },
             {[
               { q: "Voice input", detail: "Should this support voice? Many agency folks are on the go." },
               { q: "Multi-turn memory", detail: "How much conversation history to keep in context?" },
-              { q: "Correction handling", detail: "When user says 'actually, change that' — how to handle gracefully?" },
+              { q: "Correction handling", detail: "When user says 'actually, change that.' How to handle gracefully?" },
               { q: "Collaborative conversations", detail: "Can multiple people be in the same conversation?" },
             ].map((item) => (
               <li key={item.q} className="flex items-start gap-2">
                 <span className="text-slate-400">→</span>
-                <span><strong className="text-slate-700">{item.q}</strong> — {item.detail}</span>
+                <span><strong className="text-slate-700">{item.q}</strong>:{item.detail}</span>
               </li>
             ))}
           </ul>

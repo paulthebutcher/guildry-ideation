@@ -16,7 +16,7 @@ function RepoTree() {
         {REPO_STRUCTURE.shared.map((item, i) => (
           <div key={i} className="flex items-start gap-3 py-1 pl-4">
             <span className="text-slate-500 shrink-0">{item.path}</span>
-            <span className="text-slate-400">—</span>
+            <span className="text-slate-400">-</span>
             <span className="text-slate-600">{item.desc}</span>
           </div>
         ))}
@@ -36,7 +36,7 @@ function RepoTree() {
               {prod.paths.map((p, i) => (
                 <div key={i} className="flex items-start gap-3 py-0.5 pl-4 text-slate-500">
                   <span className="shrink-0">{p.path}</span>
-                  <span className="text-slate-400">—</span>
+                  <span className="text-slate-400">-</span>
                   <span className="text-slate-600">{p.desc}</span>
                 </div>
               ))}
@@ -138,7 +138,7 @@ export default function ArchitecturePage() {
             title="AI Integration"
             chosen="Claude API (function calling)"
             alternatives={["OpenAI", "Multi-provider"]}
-            reasoning="Function calling for the conversational intake engine. Tool definitions per product — same orchestration code, different tool sets. Can abstract to multi-provider later if needed."
+            reasoning="Function calling for the conversational intake engine. Tool definitions per product - same orchestration code, different tool sets. Can abstract to multi-provider later if needed."
           />
           <TechDecision
             title="Auth"
@@ -215,7 +215,7 @@ export default function ArchitecturePage() {
           <div className="font-mono text-xs text-slate-600 leading-relaxed space-y-3">
             <p className="m-0">
               <span className="text-accent-blueprint font-semibold">org_id</span> is the partition key on every entity.
-              All queries are scoped by org. Prisma middleware enforces this — no query can execute without an org context.
+              All queries are scoped by org. Prisma middleware enforces this - no query can execute without an org context.
             </p>
             <p className="m-0">
               <span className="text-accent-compass font-semibold">Row-level security</span> in Postgres as a second layer.

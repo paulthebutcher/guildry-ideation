@@ -118,7 +118,7 @@ export default function SecurityPage() {
       {/* Architecture decisions */}
       <Section title="Architecture Decisions">
         <p className="text-sm text-slate-600 mb-6">
-          Security isn't a feature we bolt on later — it's baked into the architecture from day one.
+          Security isn't a feature we bolt on later. It's baked into the architecture from day one.
           These decisions affect everything downstream.
         </p>
         <div className="space-y-4">
@@ -127,7 +127,7 @@ export default function SecurityPage() {
             status="leaning"
             options={["Multi-tenant (shared infra)", "Single-tenant (dedicated)", "Hybrid"]}
             recommendation="Hybrid: Multi-tenant default, single-tenant option for enterprise"
-            tradeoffs="Multi-tenant is cheaper and faster to ship. Single-tenant is required for some enterprise sales. Building both from day one is expensive — but retrofitting single-tenant later is harder. Start with strong multi-tenant isolation, add single-tenant when enterprise demand justifies it."
+            tradeoffs="Multi-tenant is cheaper and faster to ship. Single-tenant is required for some enterprise sales. Building both from day one is expensive, but retrofitting single-tenant later is harder. Start with strong multi-tenant isolation, add single-tenant when enterprise demand justifies it."
           />
 
           <DecisionCard
@@ -215,8 +215,8 @@ export default function SecurityPage() {
             { item: "org_id on every table", desc: "No query can run without tenant context" },
             { item: "Row-level security", desc: "Postgres RLS as a second layer of tenant isolation" },
             { item: "Audit logging", desc: "Who accessed what, when, from where" },
-            { item: "Secure auth", desc: "Clerk or similar — no rolling our own auth" },
-            { item: "Secrets management", desc: "No credentials in code — use environment variables or Vault" },
+            { item: "Secure auth", desc: "Clerk or similar. No rolling our own auth" },
+            { item: "Secrets management", desc: "No credentials in code. Use environment variables or Vault" },
             { item: "Backup & recovery", desc: "Daily backups, tested restore procedure" },
           ].map((item, i) => (
             <div key={i} className="p-4 rounded-lg border border-slate-200 bg-white">
@@ -246,7 +246,7 @@ export default function SecurityPage() {
               <li>Data encrypted with AES-256 at rest, TLS 1.3 in transit</li>
               <li>Row-level security ensures tenant isolation</li>
               <li>SOC 2 Type I in progress (or certified, once we are)</li>
-              <li>Anthropic API used for AI — no training on customer data</li>
+              <li>Anthropic API used for AI. No training on customer data</li>
               <li>Data stored in US (AWS us-east-1)</li>
               <li>Annual penetration testing (once we do it)</li>
               <li>Incident response plan documented</li>
@@ -269,7 +269,7 @@ export default function SecurityPage() {
             {[
               {
                 q: "Do we need a DPA template?",
-                detail: "Data Processing Agreement — some customers will require it before signing. Should have a standard template ready."
+                detail: "Data Processing Agreement. Some customers will require it before signing. Should have a standard template ready."
               },
               {
                 q: "What's our data retention policy?",

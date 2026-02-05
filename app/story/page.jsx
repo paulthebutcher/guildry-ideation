@@ -21,7 +21,7 @@ const SCENARIOS = [
       title: "Informed response in hours",
       steps: [
         "Lead captured automatically from email or form",
-        "AI surfaces: '3 similar projects found — avg 320 hours, 12 weeks'",
+        "AI surfaces: '3 similar projects found, averaging 320 hours, 12 weeks'",
         "One-click to see what went well/poorly on those projects",
         "Generate SOW draft with realistic phases and estimates",
         "Review, adjust, send"
@@ -52,7 +52,7 @@ const SCENARIOS = [
         "Describe the project in natural language",
         "AI suggests phases based on your historical patterns",
         "See confidence intervals: 'Design phase: 40-60 hrs (based on 8 projects)'",
-        "AI flags: 'Projects with this client tend to run 15% over — adjust?'",
+        "AI flags: 'Projects with this client tend to run 15% over. Adjust?'",
         "Generate SOW with realistic numbers"
       ],
       time: "1-2 hours per SOW",
@@ -97,7 +97,7 @@ const SCENARIOS = [
         "Weekly status meeting (30 min, 6 people)",
         "PM manually compiles hours from time tracker",
         "Compare to... what was the original estimate again?",
-        "Client asks 'Are we on track?' — you're not sure",
+        "Client asks 'Are we on track?' You're not sure.",
         "Scope creep happens but nobody documents it",
         "Find out you're over budget when it's too late"
       ],
@@ -109,7 +109,7 @@ const SCENARIOS = [
       steps: [
         "Dashboard shows: estimated vs actual in real-time",
         "AI flags: 'Design phase at 80% of budget with 60% complete'",
-        "Scope drift detected: 'Client requested X — not in original SOW'",
+        "Scope drift detected: 'Client requested X, not in the original SOW'",
         "Auto-generated status update ready for client review",
         "Course-correct while there's still time"
       ],
@@ -135,7 +135,7 @@ const SCENARIOS = [
     after: {
       title: "Learning captured automatically",
       steps: [
-        "AI drafts retro from project data: 'Design ran 20% over — extra revision rounds'",
+        "AI drafts retro from project data: 'Design ran 20% over. Extra revision rounds.'",
         "Quick conversation: 'Was that a client issue or scoping miss?'",
         "Insights feed back to estimation model",
         "Next similar project gets better defaults",
@@ -153,7 +153,7 @@ const SCENARIOS = [
       steps: [
         "Sales: 'Do we have a case study for fintech projects?'",
         "Marketing: 'I think we did one in 2019...'",
-        "Find the old PDF — it's outdated and generic",
+        "Find the old PDF. It's outdated and generic.",
         "Ask the PM to write something new (they're busy)",
         "Cobble together a deck the night before the pitch"
       ],
@@ -256,7 +256,7 @@ export default function StoryPage() {
         </h1>
         <p className="text-slate-600 max-w-2xl leading-relaxed">
           What changes when your project management system actually learns from your work?
-          Here's the same week at a 75-person agency — with and without Guildry.
+          Here's the same week at a 75-person agency, with and without Guildry.
         </p>
       </div>
 

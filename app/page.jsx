@@ -18,12 +18,12 @@ export default function HomePage() {
 
         <p className="text-lg text-slate-600 max-w-2xl leading-relaxed mb-4">
           A project intelligence platform for services firms. Scope work, staff teams,
-          manage clients, and learn from every project — with a learning loop that
+          manage clients, and learn from every project. A learning loop that
           makes your next estimate more accurate than your last.
         </p>
 
         <p className="text-sm text-slate-500 max-w-2xl mb-8">
-          For agencies tired of underquoting projects, scrambling to staff them, and forgetting what they learned. Your 10th project estimate is 40% more accurate than your 1st — because the system learns from every project you close.
+          For agencies tired of underquoting projects, scrambling to staff them, and forgetting what they learned. Your 10th estimate is 40% more accurate than your 1st because the system learns from every project you close.
         </p>
 
         <div className="flex gap-3 flex-wrap">
@@ -52,15 +52,15 @@ export default function HomePage() {
           <ul className="space-y-2 text-sm text-slate-600 m-0 p-0 list-none">
             <li className="flex items-start gap-2">
               <span className="text-accent-blueprint">→</span>
-              <span><strong className="text-slate-800">Advisors</strong> — GTM and engineering perspectives to pressure-test the approach</span>
+              <span><strong className="text-slate-800">Advisors</strong> with GTM and engineering perspectives to pressure-test the approach</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-accent-blueprint">→</span>
-              <span><strong className="text-slate-800">Validation partners</strong> — folks in services businesses willing to share how they work today</span>
+              <span><strong className="text-slate-800">Validation partners</strong> in services businesses willing to share how they work today</span>
             </li>
             <li className="flex items-start gap-2">
               <span className="text-accent-blueprint">→</span>
-              <span><strong className="text-slate-800">Potential technical cofounder</strong> — if this resonates and you want to build it</span>
+              <span><strong className="text-slate-800">Potential technical cofounder</strong> if this resonates and you want to build it</span>
             </li>
           </ul>
         </div>
@@ -70,7 +70,7 @@ export default function HomePage() {
             Target Market
           </h2>
           <p className="text-sm text-slate-600 m-0 mb-3">
-            <strong className="text-slate-800">Services firms with existing process</strong> — agencies and consultancies already using tools like Notion, Asana, or Monday to manage work. They have the habit; they just don't have a system that learns.
+            <strong className="text-slate-800">Services firms with existing process.</strong> Agencies and consultancies already using tools like Notion, Asana, or Monday. They have the habit; they just don't have a system that learns.
           </p>
           <div className="flex items-center gap-2 text-xs text-slate-500 font-mono">
             <span className="px-2 py-1 rounded bg-white border border-slate-200">50-100 people</span>
@@ -94,19 +94,19 @@ export default function HomePage() {
           {[
             {
               title: "LLMs changed the input layer",
-              body: "Before 2023, building a system that understands 'it's a medium-sized redesign, maybe 8 weeks' required years of NLP work. Now Claude can extract structured project data from natural language in seconds. The conversational interface is suddenly viable.",
+              body: "Before 2023, building a system that understands 'it's a medium-sized redesign, maybe 8 weeks' required years of NLP work. Now Claude can extract structured project data from natural language in seconds.",
             },
             {
               title: "Services firms are data-rich but insight-poor",
-              body: "Every agency has years of SOWs, time logs, and retro notes buried in Google Drive. The data exists — it's just never been connected. LLMs can parse unstructured history and bootstrap the learning model from day one.",
+              body: "Every agency has years of SOWs, time logs, and retro notes buried in Google Drive. The data exists but has never been connected. LLMs can parse unstructured history and bootstrap the learning model from day one.",
             },
             {
               title: "The tool stack is fragmenting",
-              body: "Firms now use 5-10 tools for what used to be one PSA suite. Each tool is best-in-class at its job but siloed from the others. There's an opportunity for a layer that connects them — not replaces them.",
+              body: "Firms now use 5-10 tools for what used to be one PSA suite. Each tool is best-in-class but siloed. There's an opportunity for a layer that connects them without replacing them.",
             },
             {
               title: "Remote work raised the stakes",
-              body: "Distributed teams can't rely on hallway knowledge transfer. 'Ask Sarah, she did a project like this' doesn't work when Sarah is in a different timezone. Institutional knowledge needs to live in the system.",
+              body: "Distributed teams can't rely on hallway knowledge transfer. 'Ask Sarah, she did a project like this' doesn't work across timezones. Institutional knowledge needs to live in the system.",
             },
           ].map((item, i) => (
             <div key={i} className="rounded-xl p-5 border border-slate-200 bg-slate-50">
@@ -195,7 +195,7 @@ export default function HomePage() {
                 <p className="m-0"><strong className="text-violet-600">Staff</strong> it with contractors matched by skills and past performance.</p>
                 <p className="m-0"><strong className="text-pink-600">Deliver</strong> with real-time tracking against the original scope.</p>
                 <p className="m-0"><strong className="text-amber-600">Learn</strong> what went well and what didn't when it closes.</p>
-                <p className="m-0"><strong className="text-teal-600">Improve</strong> the model — next project's estimates are more accurate.</p>
+                <p className="m-0"><strong className="text-teal-600">Improve</strong> the model so next project's estimates are more accurate.</p>
               </div>
               <p className="text-xs text-slate-500 mt-4 m-0">
                 <strong>The moat:</strong> Competitors can copy features. They can't copy your project history.
@@ -212,7 +212,7 @@ export default function HomePage() {
         </h2>
         <div className="rounded-xl border border-slate-200 p-6 bg-slate-50">
           <p className="text-sm text-slate-600 mb-4 m-0">
-            Guildry doesn't replace your existing tools — it learns from them. Planned integrations:
+            Guildry doesn't replace your existing tools. It learns from them.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {[
