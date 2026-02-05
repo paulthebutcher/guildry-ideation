@@ -4,7 +4,8 @@ Internal architecture documentation for the product platform. Built with Next.js
 
 ## Pages
 
-- **/** — Overview: platform vision, product pipeline, key bets
+- **/** — Overview: platform vision, product pipeline, learning loop diagram, key bets
+- **/story** — Before & after narrative: week at an agency with/without Guildry
 - **/products** — Individual product briefs with problem/solution/tech stack
 - **/system/ai** — Conversational AI system architecture
 - **/system/security** — Data security, privacy, and compliance planning

@@ -189,7 +189,7 @@ export default function RoadmapPage() {
         <div className="rounded-xl p-6 border border-slate-200 text-sm text-slate-600 leading-relaxed bg-slate-50">
           <p className="m-0 mb-3">
             <span className="text-accent-blueprint font-semibold font-mono">Blueprint + Bench + Retro first</span> because together
-            they close the feedback loop. This is the core value prop: scope → staff → deliver → learn → improve. The data flywheel
+            they close the feedback loop. This is the core value prop: scope → staff → deliver → learn → improve. The learning loop
             starts turning immediately. You can&apos;t sell &ldquo;projects that get smarter&rdquo; without the learning loop.
           </p>
           <p className="m-0 mb-3">

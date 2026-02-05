@@ -1,69 +1,5 @@
 "use client";
 import Link from "next/link";
-import { PRODUCTS, PIPELINE_PHASES } from "../lib/data";
-
-function PipelineDiagram() {
-  return (
-    <div className="flex items-center justify-start gap-0 py-6 overflow-x-auto">
-      {PIPELINE_PHASES.map((phase, i) => {
-        const prod = PRODUCTS[phase.key];
-        return (
-          <div key={phase.key} className="flex items-center">
-            <div
-              className="flex flex-col items-center gap-1.5 px-4 py-3 rounded-lg min-w-[80px] border transition-all duration-200 hover:scale-105 cursor-default"
-              style={{
-                background: `${prod.color}08`,
-                borderColor: `${prod.color}30`,
-              }}
-            >
-              <span className="font-mono text-lg" style={{ color: prod.color }}>{prod.icon}</span>
-              <span className="font-mono text-xs font-semibold" style={{ color: prod.color }}>
-                {prod.name}
-              </span>
-              <span className="text-[9px] text-slate-500 uppercase tracking-widest">
-                {phase.label}
-              </span>
-            </div>
-            {i < PIPELINE_PHASES.length - 1 && (
-              <span className="text-slate-400 px-1 text-sm">→</span>
-            )}
-          </div>
-        );
-      })}
-      <div className="flex items-center ml-3">
-        <span className="text-slate-400 text-sm">↩</span>
-        <span className="text-[9px] text-slate-500 ml-1.5 font-mono">loop</span>
-      </div>
-    </div>
-  );
-}
-
-function ProductCard({ productKey, product }) {
-  return (
-    <div
-      className="group rounded-xl p-5 border transition-all duration-200 hover:shadow-md"
-      style={{
-        background: "#f8fafc",
-        borderColor: `${product.color}20`,
-      }}
-    >
-      <div className="flex items-center gap-3 mb-3">
-        <span className="text-xl" style={{ color: product.color }}>{product.icon}</span>
-        <div>
-          <h3 className="font-mono text-sm font-semibold m-0" style={{ color: product.color }}>
-            {product.name}
-          </h3>
-          <span className="text-[10px] text-slate-500 uppercase tracking-widest font-mono">
-            {product.phase}
-          </span>
-        </div>
-      </div>
-      <p className="text-xs text-slate-600 leading-relaxed m-0">
-        {product.tagline}
-      </p>
-    </div>
-  );
-}
 
 export default function HomePage() {
   return (
@@ -82,7 +18,7 @@ export default function HomePage() {
 
         <p className="text-lg text-slate-600 max-w-2xl leading-relaxed mb-4">
           A project intelligence platform for services firms. Scope work, staff teams,
-          manage clients, and learn from every project — with a data flywheel that
+          manage clients, and learn from every project — with a learning loop that
           makes your next estimate more accurate than your last.
         </p>
 
@@ -92,17 +28,17 @@ export default function HomePage() {
 
         <div className="flex gap-3 flex-wrap">
           <Link
-            href="/products"
+            href="/story"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-mono text-xs font-semibold no-underline transition-all text-white"
             style={{ background: "#0d9488" }}
           >
-            See the Products →
+            See the Before & After →
           </Link>
           <Link
-            href="/challenges"
+            href="/products"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-mono text-xs font-semibold no-underline border transition-all text-slate-600 border-slate-300 hover:border-slate-400 hover:bg-slate-50"
           >
-            Design Challenges
+            The 7 Products
           </Link>
         </div>
       </div>
@@ -149,70 +85,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Pipeline */}
-      <section className="mb-20">
-        <h2 className="font-mono text-[11px] uppercase tracking-[0.15em] text-slate-500 mb-2">
-          The Lifecycle
-        </h2>
-        <p className="text-sm text-slate-600 mb-4 max-w-xl">
-          Every services business cycles through the same phases: notice → decide → scope → staff → manage → learn → sell.
-          Each product owns one phase. The feedback loop makes the whole system smarter.
-        </p>
-        <div className="p-4 rounded-xl border border-slate-200 bg-slate-50">
-          <PipelineDiagram />
-        </div>
-      </section>
-
-      {/* Product Grid */}
-      <section className="mb-20">
-        <h2 className="font-mono text-[11px] uppercase tracking-[0.15em] text-slate-500 mb-6">
-          The Products
-        </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3">
-          {Object.entries(PRODUCTS).map(([key, prod]) => (
-            <ProductCard key={key} productKey={key} product={prod} />
-          ))}
-        </div>
-      </section>
-
-      {/* The Problem Today */}
-      <section className="mb-20">
-        <h2 className="font-mono text-[11px] uppercase tracking-[0.15em] text-slate-500 mb-6">
-          The Problem Today
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
-          {[
-            {
-              tool: "Project management",
-              examples: "Monday, Asana, Notion",
-              gap: "Tracks tasks, not project economics. No connection between what you scoped and what you delivered. Learning stays in your head.",
-            },
-            {
-              tool: "Time tracking",
-              examples: "Harvest, Toggl, Clockify",
-              gap: "Records hours but doesn't analyze them. You know you went over budget — but not why, or how to prevent it next time.",
-            },
-            {
-              tool: "PSA suites",
-              examples: "Kantata, Accelo, Teamwork",
-              gap: "Enterprise-grade, enterprise-priced, enterprise-complex. 6-month implementations. Built for compliance, not intelligence.",
-            },
-          ].map((item, i) => (
-            <div key={i} className="rounded-xl p-5 border border-slate-200 bg-white">
-              <div className="font-mono text-xs font-semibold text-slate-800 mb-1">{item.tool}</div>
-              <div className="text-[10px] text-slate-400 mb-3 font-mono">{item.examples}</div>
-              <p className="text-xs text-slate-600 leading-relaxed m-0">{item.gap}</p>
-            </div>
-          ))}
-        </div>
-        <div className="p-4 rounded-xl border border-amber-200 bg-amber-50">
-          <p className="text-sm text-amber-800 m-0">
-            <strong>The common thread:</strong> These tools capture data but don't learn from it.
-            Your 100th project estimate is no more accurate than your 10th — because the system has no memory.
-          </p>
-        </div>
-      </section>
-
       {/* Why Now */}
       <section className="mb-20">
         <h2 className="font-mono text-[11px] uppercase tracking-[0.15em] text-slate-500 mb-6">
@@ -245,92 +117,91 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* The Math */}
+      {/* The Learning Loop */}
       <section className="mb-20">
         <h2 className="font-mono text-[11px] uppercase tracking-[0.15em] text-slate-500 mb-6">
-          The Math
+          The Learning Loop
         </h2>
-        <div className="rounded-xl border border-slate-200 overflow-hidden">
-          <div className="p-6 bg-slate-50 border-b border-slate-200">
-            <p className="text-sm text-slate-600 m-0">
-              For a 75-person agency doing $10M in annual revenue across ~50 projects:
-            </p>
-          </div>
-          <div className="p-6 bg-white">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {[
-                {
-                  metric: "Estimation accuracy",
-                  before: "±30% variance",
-                  after: "±15% variance",
-                  impact: "On a $200K average project, that's $30K less overrun risk per project.",
-                  value: "$1.5M/year",
-                },
-                {
-                  metric: "Scoping time",
-                  before: "8 hours per SOW",
-                  after: "2 hours per SOW",
-                  impact: "At $150/hr blended rate, that's $900 saved per project.",
-                  value: "$45K/year",
-                },
-                {
-                  metric: "Retro capture rate",
-                  before: "20% of projects",
-                  after: "80% of projects",
-                  impact: "4x more learning data means estimates improve 4x faster.",
-                  value: "Compounds",
-                },
-              ].map((item, i) => (
-                <div key={i} className="text-center">
-                  <div className="font-mono text-[10px] text-slate-500 uppercase tracking-wider mb-2">{item.metric}</div>
-                  <div className="flex items-center justify-center gap-2 mb-2">
-                    <span className="text-xs text-slate-400 line-through">{item.before}</span>
-                    <span className="text-slate-400">→</span>
-                    <span className="text-xs text-teal-700 font-semibold">{item.after}</span>
-                  </div>
-                  <p className="text-[11px] text-slate-500 mb-2 m-0">{item.impact}</p>
-                  <div className="font-mono text-lg font-bold text-accent-blueprint">{item.value}</div>
+        <div className="rounded-xl border border-slate-200 p-8 bg-slate-50">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+            {/* Loop diagram */}
+            <div className="relative w-64 h-64 flex-shrink-0">
+              {/* Center */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-20 h-20 rounded-full bg-gradient-to-br from-teal-500 to-indigo-600 flex items-center justify-center shadow-lg">
+                  <span className="text-white text-xs font-mono font-bold text-center leading-tight">Your<br/>Data</span>
                 </div>
-              ))}
+              </div>
+              {/* Orbiting items */}
+              {[
+                { label: "Scope", icon: "📐", angle: 0, color: "#4f46e5" },
+                { label: "Staff", icon: "👥", angle: 72, color: "#7c3aed" },
+                { label: "Deliver", icon: "🚀", angle: 144, color: "#db2777" },
+                { label: "Learn", icon: "📊", angle: 216, color: "#b45309" },
+                { label: "Improve", icon: "📈", angle: 288, color: "#0d9488" },
+              ].map((item, i) => {
+                const rad = (item.angle * Math.PI) / 180;
+                const x = 50 + 38 * Math.cos(rad);
+                const y = 50 + 38 * Math.sin(rad);
+                return (
+                  <div
+                    key={i}
+                    className="absolute w-14 h-14 rounded-full bg-white border-2 flex flex-col items-center justify-center shadow-sm"
+                    style={{
+                      left: `${x}%`,
+                      top: `${y}%`,
+                      transform: "translate(-50%, -50%)",
+                      borderColor: item.color,
+                    }}
+                  >
+                    <span className="text-lg">{item.icon}</span>
+                    <span className="text-[8px] font-mono font-semibold" style={{ color: item.color }}>{item.label}</span>
+                  </div>
+                );
+              })}
+              {/* Arrows */}
+              <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
+                <defs>
+                  <marker id="arrowhead" markerWidth="6" markerHeight="6" refX="3" refY="3" orient="auto">
+                    <path d="M0,0 L6,3 L0,6 Z" fill="#94a3b8" />
+                  </marker>
+                </defs>
+                {[0, 72, 144, 216, 288].map((angle, i) => {
+                  const nextAngle = (angle + 72) % 360;
+                  const rad1 = (angle * Math.PI) / 180;
+                  const rad2 = (nextAngle * Math.PI) / 180;
+                  const r = 38;
+                  const midAngle = ((angle + 36) * Math.PI) / 180;
+                  return (
+                    <path
+                      key={i}
+                      d={`M ${50 + (r - 5) * Math.cos(rad1 + 0.3)} ${50 + (r - 5) * Math.sin(rad1 + 0.3)}
+                          Q ${50 + (r + 5) * Math.cos(midAngle)} ${50 + (r + 5) * Math.sin(midAngle)}
+                          ${50 + (r - 5) * Math.cos(rad2 - 0.3)} ${50 + (r - 5) * Math.sin(rad2 - 0.3)}`}
+                      fill="none"
+                      stroke="#cbd5e1"
+                      strokeWidth="1.5"
+                      markerEnd="url(#arrowhead)"
+                    />
+                  );
+                })}
+              </svg>
+            </div>
+            {/* Explanation */}
+            <div className="max-w-sm">
+              <h3 className="font-mono text-sm font-semibold text-slate-800 mb-3 mt-0">Every cycle makes the next one better</h3>
+              <div className="space-y-3 text-xs text-slate-600">
+                <p className="m-0"><strong className="text-indigo-600">Scope</strong> a project using AI-suggested estimates based on your history.</p>
+                <p className="m-0"><strong className="text-violet-600">Staff</strong> it with contractors matched by skills and past performance.</p>
+                <p className="m-0"><strong className="text-pink-600">Deliver</strong> with real-time tracking against the original scope.</p>
+                <p className="m-0"><strong className="text-amber-600">Learn</strong> what went well and what didn't when it closes.</p>
+                <p className="m-0"><strong className="text-teal-600">Improve</strong> the model — next project's estimates are more accurate.</p>
+              </div>
+              <p className="text-xs text-slate-500 mt-4 m-0">
+                <strong>The moat:</strong> Competitors can copy features. They can't copy your project history.
+              </p>
             </div>
           </div>
-          <div className="p-4 bg-teal-50 border-t border-teal-200">
-            <p className="text-sm text-teal-800 m-0 text-center">
-              <strong>Conservative estimate:</strong> 10-20x ROI in year one. The value compounds as the model learns.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Why It Works */}
-      <section className="mb-20">
-        <h2 className="font-mono text-[11px] uppercase tracking-[0.15em] text-slate-500 mb-6">
-          Why This Approach
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {[
-            {
-              title: "Your data compounds",
-              body: "Every project you complete makes the next one easier. Estimates get more accurate. Staffing gets smarter. Case studies write themselves. Competitors without your project history can't replicate this.",
-            },
-            {
-              title: "Integrated from day one",
-              body: "This isn't seven tools you buy separately. It's one system where scoping feeds staffing, delivery feeds learning, and learning feeds the next scope. The value is in the connections.",
-            },
-            {
-              title: "Captures passively",
-              body: "The biggest failure mode is falling back to old habits. Guildry integrates with the tools you already use — syncing from Slack, calendars, and project boards — so it learns even when you forget to tell it.",
-            },
-            {
-              title: "Meets you where you are",
-              body: "Not a blank slate. Import your past SOWs and project data to bootstrap the model. The system gets useful fast because it starts with your history, not from zero.",
-            },
-          ].map((item, i) => (
-            <div key={i} className="rounded-xl p-5 border border-slate-200 bg-slate-50">
-              <h3 className="font-mono text-sm font-semibold text-accent-secondary mb-2 mt-0">{item.title}</h3>
-              <p className="text-xs text-slate-600 leading-relaxed m-0">{item.body}</p>
-            </div>
-          ))}
         </div>
       </section>
 
@@ -362,53 +233,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Day One */}
-      <section className="mb-20">
-        <h2 className="font-mono text-[11px] uppercase tracking-[0.15em] text-slate-500 mb-6">
-          Day One Experience
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-          {[
-            {
-              step: "1",
-              title: "Connect your tools",
-              desc: "Link your project tracker, time tracker, and document storage. We'll scan for historical project data.",
-              time: "15 min",
-            },
-            {
-              step: "2",
-              title: "Import past work",
-              desc: "Upload SOWs, proposals, and retro notes. The AI parses them into structured project records.",
-              time: "30 min",
-            },
-            {
-              step: "3",
-              title: "Scope your first project",
-              desc: "Tell the system about an upcoming project. It suggests estimates based on your imported history.",
-              time: "20 min",
-            },
-            {
-              step: "4",
-              title: "See the flywheel",
-              desc: "As you close projects and run retros, watch the estimates get more accurate over time.",
-              time: "Ongoing",
-            },
-          ].map((item, i) => (
-            <div key={i} className="rounded-xl p-5 border border-slate-200 bg-white relative">
-              <div className="absolute -top-3 -left-2 w-7 h-7 rounded-full bg-accent-blueprint flex items-center justify-center">
-                <span className="font-mono text-xs font-bold text-white">{item.step}</span>
-              </div>
-              <h3 className="font-mono text-xs font-semibold text-slate-800 mb-2 mt-2">{item.title}</h3>
-              <p className="text-[11px] text-slate-600 leading-relaxed m-0 mb-2">{item.desc}</p>
-              <div className="font-mono text-[10px] text-slate-400">{item.time}</div>
-            </div>
-          ))}
-        </div>
-        <p className="text-xs text-slate-500 mt-4 text-center">
-          Target: useful estimates within the first hour. Value compounds from there.
-        </p>
-      </section>
-
       {/* FAQ */}
       <section className="mb-20">
         <h2 className="font-mono text-[11px] uppercase tracking-[0.15em] text-slate-500 mb-6">
@@ -417,33 +241,29 @@ export default function HomePage() {
         <div className="space-y-3">
           {[
             {
-              q: "How is this different from [Monday/Asana/Notion]?",
-              a: "Those tools track tasks. Guildry tracks project economics — and learns from them. Think of it as a layer that sits on top of your existing stack and adds intelligence.",
-            },
-            {
               q: "Do I have to replace my current tools?",
               a: "No. Guildry integrates with your existing tools and learns from the data they capture. You keep using what works; we add the learning layer.",
             },
             {
               q: "How long until it's actually useful?",
-              a: "With historical data import, you can get useful estimates in hour one. Without history, you'll need 5-10 closed projects for the model to calibrate. We're designing the onboarding to front-load value.",
+              a: "With historical data import, you can get useful estimates in hour one. Without history, you'll need 5-10 closed projects for the model to calibrate.",
             },
             {
               q: "What about data privacy?",
-              a: "SOWs and project data are sensitive. We're designing for strict tenant isolation from day one. Enterprise customers will have options for dedicated infrastructure. More details in the Challenges section.",
-            },
-            {
-              q: "Is this AI-generated fluff?",
-              a: "The AI handles input (natural language → structured data) and synthesis (data → insights). The core value — your historical project data and the patterns in it — is real and yours. The AI accelerates; it doesn't fabricate.",
-            },
-            {
-              q: "Why not just use a spreadsheet?",
-              a: "You could. Many firms do. But spreadsheets don't learn, don't integrate, and don't scale with you. If your spreadsheet system is working, you're probably not the target market — yet.",
+              a: "SOWs and project data are sensitive. We're designing for strict tenant isolation, encryption, and clear data residency policies from day one.",
+              link: "/system/security",
             },
           ].map((item, i) => (
             <div key={i} className="rounded-xl p-5 border border-slate-200 bg-white">
               <h3 className="font-mono text-xs font-semibold text-slate-800 mb-2 mt-0">{item.q}</h3>
-              <p className="text-xs text-slate-600 leading-relaxed m-0">{item.a}</p>
+              <p className="text-xs text-slate-600 leading-relaxed m-0">
+                {item.a}
+                {item.link && (
+                  <Link href={item.link} className="ml-1 text-teal-600 hover:text-teal-700 underline">
+                    Learn more →
+                  </Link>
+                )}
+              </p>
             </div>
           ))}
         </div>
@@ -456,9 +276,9 @@ export default function HomePage() {
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           {[
+            { href: "/story", title: "Before & After", desc: "The transformation story", color: "#db2777" },
             { href: "/products", title: "Products", desc: "Briefs for all 7 products", color: "#4f46e5" },
-            { href: "/system/ai", title: "AI System", desc: "How the AI layer works", color: "#0d9488" },
-            { href: "/challenges", title: "Challenges", desc: "Design problems to solve", color: "#db2777" },
+            { href: "/challenges", title: "Challenges", desc: "Design problems to solve", color: "#7c3aed" },
             { href: "/roadmap", title: "Roadmap", desc: "6-month phased plan", color: "#b45309" },
           ].map((link) => (
             <Link

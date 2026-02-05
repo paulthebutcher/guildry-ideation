@@ -87,7 +87,7 @@ export default function ChallengesPage() {
     },
     {
       title: "3. Multi-stakeholder handoffs",
-      problem: "Sales scopes the project. PM staffs it. Delivery runs it. Finance closes it. Different people touch different phases — but continuity of data is what makes the flywheel work. Multi-stakeholder handoffs are a design challenge.",
+      problem: "Sales scopes the project. PM staffs it. Delivery runs it. Finance closes it. Different people touch different phases — but continuity of data is what makes the learning loop work. Multi-stakeholder handoffs are a design challenge.",
       status: "hypothesis",
       response: "The AI is the connective tissue. Each person talks to the same system, which maintains context across handoffs. When the PM picks up a project, the AI already knows what sales discussed. The conversation history *is* the handoff document. No separate 'handoff meeting' or 'transition doc' — just pick up where the last person left off.",
       conversationalLeverage: "Instead of 'read this doc before taking over,' it's 'ask the AI what you need to know.' The AI summarizes context for a new stakeholder, flags things they should know, and answers questions about decisions made earlier. Natural language is the interface between roles.",
@@ -179,7 +179,7 @@ export default function ChallengesPage() {
           <p className="text-sm text-indigo-700 m-0 leading-relaxed">
             One unified data model means no sync problems and no translation layers. Cross-product
             triggers automate what would otherwise require manual discipline. Data captured once
-            flows everywhere it's needed — the schema is designed for the flywheel.
+            flows everywhere it's needed — the schema is designed for the learning loop.
           </p>
         </div>
       </div>
