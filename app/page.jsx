@@ -77,13 +77,13 @@ export default function HomePage() {
         </div>
 
         <h1 className="text-5xl sm:text-6xl font-extrabold tracking-tight mb-6 text-gradient leading-tight">
-          Seven products.<br />One data layer.
+          Projects that get<br />smarter over time.
         </h1>
 
         <p className="text-lg text-slate-600 max-w-2xl leading-relaxed mb-8">
-          AI tools that help professional services firms scope projects accurately,
-          staff them with the right people, manage client relationships, and turn
-          completed work into new business.
+          A project intelligence platform for services firms. Scope work, staff teams,
+          manage clients, and learn from every project — with a data flywheel that
+          makes your next estimate more accurate than your last.
         </p>
 
         <div className="flex gap-3 flex-wrap">
@@ -171,28 +171,28 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Key Decisions */}
+      {/* Why It Works */}
       <section className="mb-20">
         <h2 className="font-mono text-[11px] uppercase tracking-[0.15em] text-slate-500 mb-6">
-          Key Architectural Bets
+          Why This Approach
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {[
             {
-              title: "Separate brands, shared infra",
-              body: "Each product has its own GTM, pricing, and buyer persona. But they share auth, data models, the conversational intake engine, and document generation. Adding a new product means defining a new schema target and tool definitions — not rebuilding infrastructure.",
+              title: "Your data compounds",
+              body: "Every project you complete makes the next one easier. Estimates get more accurate. Staffing gets smarter. Case studies write themselves. Competitors without your project history can't replicate this.",
             },
             {
-              title: "Conversational intake as the core pattern",
-              body: "Every product uses the same interaction model: take messy open input → ask smart follow-up questions → fill a structured schema → generate outputs. This is one codebase that serves all seven products with different configurations.",
+              title: "Integrated from day one",
+              body: "This isn't seven tools you buy separately. It's one system where scoping feeds staffing, delivery feeds learning, and learning feeds the next scope. The value is in the connections.",
             },
             {
-              title: "Nullable FKs for progressive integration",
-              body: "Cross-product references are always nullable. Armature works without Plinth. Relay works without Bench. When you're ready to wire them together, it's populating a single foreign key field — not a migration.",
+              title: "Starts where it hurts most",
+              body: "We're building Blueprint + Bench + Retro first — the core project loop. That's where firms lose the most money (bad scopes) and miss the biggest opportunity (learning from past work).",
             },
             {
-              title: "Learning loop as competitive moat",
-              body: "Retro → PhasePerformance → EstimationModel is a data flywheel. Every completed project makes the next estimate more accurate. Competitors without your historical data can't replicate this, even if they copy the UI.",
+              title: "Works how you work",
+              body: "Tell it about a project in plain language. It asks the right questions, fills in the structure, and generates the documents. No forms, no rigid workflows, no 'implementation consultants.'",
             },
           ].map((item, i) => (
             <div key={i} className="rounded-xl p-5 border border-slate-200 bg-slate-50">

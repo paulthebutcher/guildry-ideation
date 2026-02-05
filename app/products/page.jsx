@@ -98,7 +98,7 @@ function ProductBrief({ productKey, product, detail, isExpanded, onToggle }) {
 }
 
 export default function ProductsPage() {
-  const [expanded, setExpanded] = useState("armature");
+  const [expanded, setExpanded] = useState("blueprint");
 
   return (
     <div className="max-w-5xl mx-auto px-6 py-16">
@@ -146,13 +146,13 @@ export default function ProductsPage() {
             </thead>
             <tbody>
               {[
-                { key: "signal", buyer: "Founder / BD lead", entry: "Free tier monitoring", monetization: "Usage-based (signals/mo)", pmf: "Users check daily without prompting" },
-                { key: "plinth", buyer: "Exec / founder", entry: "First strategic decision", monetization: "Per-seat subscription", pmf: "Decisions documented & referenced later" },
-                { key: "armature", buyer: "Freelancer / agency owner", entry: "First project estimate", monetization: "Per-project or subscription", pmf: "Used on real client project unprompted" },
+                { key: "scout", buyer: "Founder / BD lead", entry: "Free tier monitoring", monetization: "Usage-based (signals/mo)", pmf: "Users check daily without prompting" },
+                { key: "compass", buyer: "Exec / founder", entry: "First strategic decision", monetization: "Per-seat subscription", pmf: "Decisions documented & referenced later" },
+                { key: "blueprint", buyer: "Freelancer / agency owner", entry: "First project estimate", monetization: "Per-project or subscription", pmf: "Used on real client project unprompted" },
                 { key: "bench", buyer: "Agency ops lead", entry: "Import contractor list", monetization: "Per-seat subscription", pmf: "Staffing decisions made through tool" },
                 { key: "relay", buyer: "Project manager / freelancer", entry: "First status update draft", monetization: "Per-project or subscription", pmf: "Client comms go through tool by default" },
-                { key: "retro", buyer: "Team lead / freelancer", entry: "First project close", monetization: "Bundled with Armature", pmf: "Retro insights referenced in next scope" },
-                { key: "folio", buyer: "Sales / BD lead", entry: "First case study generated", monetization: "Per-seat or usage", pmf: "Prospect-tuned brief used in real pitch" },
+                { key: "retro", buyer: "Team lead / freelancer", entry: "First project close", monetization: "Bundled with Blueprint", pmf: "Retro insights referenced in next scope" },
+                { key: "proof", buyer: "Sales / BD lead", entry: "First case study generated", monetization: "Per-seat or usage", pmf: "Prospect-tuned brief used in real pitch" },
               ].map((row) => (
                 <tr key={row.key} className="border-b border-slate-100 hover:bg-slate-50">
                   <td className="px-4 py-3 font-mono text-xs font-semibold" style={{ color: PRODUCTS[row.key].color }}>
