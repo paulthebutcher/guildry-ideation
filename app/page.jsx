@@ -87,7 +87,7 @@ export default function HomePage() {
         </p>
 
         <p className="text-sm text-slate-500 max-w-2xl mb-8">
-          For agencies and freelancers tired of underquoting projects, scrambling to staff them, and forgetting what they learned. Your 10th project estimate is 40% more accurate than your 1st — because the system learns from every project you close.
+          For agencies tired of underquoting projects, scrambling to staff them, and forgetting what they learned. Your 10th project estimate is 40% more accurate than your 1st — because the system learns from every project you close.
         </p>
 
         <div className="flex gap-3 flex-wrap">
@@ -134,17 +134,17 @@ export default function HomePage() {
             Target Market
           </h2>
           <p className="text-sm text-slate-600 m-0 mb-3">
-            <strong className="text-slate-800">Professional services firms</strong> — agencies, consultancies, studios, and freelancers who sell expertise and deliver projects.
+            <strong className="text-slate-800">Services firms with existing process</strong> — agencies and consultancies already using tools like Notion, Asana, or Monday to manage work. They have the habit; they just don't have a system that learns.
           </p>
           <div className="flex items-center gap-2 text-xs text-slate-500 font-mono">
-            <span className="px-2 py-1 rounded bg-white border border-slate-200">Boutique</span>
+            <span className="px-2 py-1 rounded bg-white border border-slate-200">10-50 people</span>
             <span>→</span>
-            <span className="px-2 py-1 rounded bg-white border border-slate-200">Middle Market</span>
+            <span className="px-2 py-1 rounded bg-white border border-slate-200">50-200</span>
             <span>→</span>
-            <span className="px-2 py-1 rounded bg-white border border-slate-200">Enterprise</span>
+            <span className="px-2 py-1 rounded bg-white border border-slate-200">200+</span>
           </div>
           <p className="text-xs text-slate-500 mt-3 m-0">
-            Starting small to learn fast, then scaling the playbook.
+            Not raw freelancers starting from zero. Firms with some process maturity who want it to compound.
           </p>
         </div>
       </section>
@@ -191,12 +191,12 @@ export default function HomePage() {
               body: "This isn't seven tools you buy separately. It's one system where scoping feeds staffing, delivery feeds learning, and learning feeds the next scope. The value is in the connections.",
             },
             {
-              title: "Starts where it hurts most",
-              body: "We're building Blueprint + Bench + Retro first — the core project loop. That's where firms lose the most money (bad scopes) and miss the biggest opportunity (learning from past work).",
+              title: "Captures passively",
+              body: "The biggest failure mode is falling back to old habits. Guildry integrates with the tools you already use — syncing from Slack, calendars, and project boards — so it learns even when you forget to tell it.",
             },
             {
-              title: "Works how you work",
-              body: "Tell it about a project in plain language. It asks the right questions, fills in the structure, and generates the documents. No forms, no rigid workflows, no 'implementation consultants.'",
+              title: "Meets you where you are",
+              body: "Not a blank slate. Import your past SOWs and project data to bootstrap the model. The system gets useful fast because it starts with your history, not from zero.",
             },
           ].map((item, i) => (
             <div key={i} className="rounded-xl p-5 border border-slate-200 bg-slate-50">
