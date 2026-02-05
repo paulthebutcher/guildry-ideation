@@ -103,7 +103,7 @@ export default function ProductsPage() {
   return (
     <div className="max-w-5xl mx-auto px-6 py-16">
       <div className="mb-10">
-        <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent-plinth">
+        <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent-compass">
           Product Portfolio
         </span>
         <h1 className="text-3xl font-bold tracking-tight mt-2 mb-2 text-gradient">
@@ -148,10 +148,10 @@ export default function ProductsPage() {
               {[
                 { key: "scout", buyer: "Founder / BD lead", entry: "Free tier monitoring", monetization: "Usage-based (signals/mo)", pmf: "Users check daily without prompting" },
                 { key: "compass", buyer: "Exec / founder", entry: "First strategic decision", monetization: "Per-seat subscription", pmf: "Decisions documented & referenced later" },
-                { key: "blueprint", buyer: "Freelancer / agency owner", entry: "First project estimate", monetization: "Per-project or subscription", pmf: "Used on real client project unprompted" },
-                { key: "bench", buyer: "Agency ops lead", entry: "Import contractor list", monetization: "Per-seat subscription", pmf: "Staffing decisions made through tool" },
-                { key: "relay", buyer: "Project manager / freelancer", entry: "First status update draft", monetization: "Per-project or subscription", pmf: "Client comms go through tool by default" },
-                { key: "retro", buyer: "Team lead / freelancer", entry: "First project close", monetization: "Bundled with Blueprint", pmf: "Retro insights referenced in next scope" },
+                { key: "blueprint", buyer: "Sales lead / practice lead", entry: "First project estimate", monetization: "Per-project or subscription", pmf: "Used on real client project unprompted" },
+                { key: "bench", buyer: "Ops lead / resource manager", entry: "Import contractor list", monetization: "Per-seat subscription", pmf: "Staffing decisions made through tool" },
+                { key: "relay", buyer: "Project manager / account lead", entry: "First status update draft", monetization: "Per-project or subscription", pmf: "Client comms go through tool by default" },
+                { key: "retro", buyer: "Team lead / delivery manager", entry: "First project close", monetization: "Bundled with Blueprint", pmf: "Retro insights referenced in next scope" },
                 { key: "proof", buyer: "Sales / BD lead", entry: "First case study generated", monetization: "Per-seat or usage", pmf: "Prospect-tuned brief used in real pitch" },
               ].map((row) => (
                 <tr key={row.key} className="border-b border-slate-100 hover:bg-slate-50">

@@ -92,17 +92,17 @@ export default function HomePage() {
 
         <div className="flex gap-3 flex-wrap">
           <Link
-            href="/data-model"
+            href="/products"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-mono text-xs font-semibold no-underline transition-all text-white"
             style={{ background: "#0d9488" }}
           >
-            View Data Model →
+            See the Products →
           </Link>
           <Link
-            href="/products"
+            href="/challenges"
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-mono text-xs font-semibold no-underline border transition-all text-slate-600 border-slate-300 hover:border-slate-400 hover:bg-slate-50"
           >
-            Product Briefs
+            Design Challenges
           </Link>
         </div>
       </div>
@@ -115,15 +115,15 @@ export default function HomePage() {
           </h2>
           <ul className="space-y-2 text-sm text-slate-600 m-0 p-0 list-none">
             <li className="flex items-start gap-2">
-              <span className="text-accent-armature">→</span>
+              <span className="text-accent-blueprint">→</span>
               <span><strong className="text-slate-800">Advisors</strong> — GTM and engineering perspectives to pressure-test the approach</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-accent-armature">→</span>
+              <span className="text-accent-blueprint">→</span>
               <span><strong className="text-slate-800">Validation partners</strong> — folks in services businesses willing to share how they work today</span>
             </li>
             <li className="flex items-start gap-2">
-              <span className="text-accent-armature">→</span>
+              <span className="text-accent-blueprint">→</span>
               <span><strong className="text-slate-800">Potential technical cofounder</strong> — if this resonates and you want to build it</span>
             </li>
           </ul>
@@ -137,14 +137,14 @@ export default function HomePage() {
             <strong className="text-slate-800">Services firms with existing process</strong> — agencies and consultancies already using tools like Notion, Asana, or Monday to manage work. They have the habit; they just don't have a system that learns.
           </p>
           <div className="flex items-center gap-2 text-xs text-slate-500 font-mono">
-            <span className="px-2 py-1 rounded bg-white border border-slate-200">10-50 people</span>
+            <span className="px-2 py-1 rounded bg-white border border-slate-200">50-100 people</span>
             <span>→</span>
-            <span className="px-2 py-1 rounded bg-white border border-slate-200">50-200</span>
+            <span className="px-2 py-1 rounded bg-white border border-slate-200">100-200</span>
             <span>→</span>
             <span className="px-2 py-1 rounded bg-white border border-slate-200">200+</span>
           </div>
           <p className="text-xs text-slate-500 mt-3 m-0">
-            Not raw freelancers starting from zero. Firms with some process maturity who want it to compound.
+            Big enough to have real process. Small enough to not be locked into enterprise PSA tools.
           </p>
         </div>
       </section>

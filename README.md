@@ -5,10 +5,12 @@ Internal architecture documentation for the product platform. Built with Next.js
 ## Pages
 
 - **/** — Overview: platform vision, product pipeline, key bets
-- **/data-model** — Interactive entity relationship map (17 entities, 7 layers)
 - **/products** — Individual product briefs with problem/solution/tech stack
+- **/system/ai** — Conversational AI system architecture
 - **/architecture** — Repo structure, design principles, technology decisions
+- **/data-model** — Interactive entity relationship map (17 entities, 7 layers)
 - **/roadmap** — 26-week phased implementation plan with validation gates
+- **/challenges** — Design challenges and how we're solving them
 
 ## Quick Start
 
@@ -48,10 +50,10 @@ Colors and tokens are defined in `tailwind.config.js`. Product colors:
 
 | Product | Color | Phase |
 |---------|-------|-------|
-| Signal | `#E8A838` | Notice |
-| Plinth | `#7B8CDE` | Decide |
-| Armature | `#4ECDC4` | Scope |
-| Bench | `#FF6B6B` | Staff |
-| Relay | `#A78BFA` | Manage |
-| Retro | `#F472B6` | Learn |
-| Folio | `#34D399` | Sell |
+| Scout | `#b45309` | Notice |
+| Compass | `#4f46e5` | Decide |
+| Blueprint | `#0d9488` | Scope |
+| Bench | `#dc2626` | Staff |
+| Relay | `#7c3aed` | Manage |
+| Retro | `#db2777` | Learn |
+| Proof | `#059669` | Sell |

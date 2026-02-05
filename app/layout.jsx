@@ -3,7 +3,7 @@ import Nav from "../components/Nav";
 
 export const metadata = {
   title: "Guildry — Run Services Smarter",
-  description: "AI-powered tools for freelancers and agencies to scope, staff, and deliver client work",
+  description: "Project intelligence platform for services firms — scope, staff, deliver, and learn from every project",
 };
 
 export default function RootLayout({ children }) {

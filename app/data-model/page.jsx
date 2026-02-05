@@ -121,11 +121,11 @@ function RelationshipList({ entity }) {
           const otherEntity = allEntities.find((e) => e.id === other);
           return (
             <div key={i} className="flex items-center gap-2 text-[11px]">
-              <span className="text-accent-armature font-mono">{entity.name}</span>
+              <span className="text-accent-blueprint font-mono">{entity.name}</span>
               <span className="text-slate-400">—</span>
               <span className="text-slate-500 italic text-[10px]">{r.label}</span>
               <span className="text-slate-400">→</span>
-              <span className="text-accent-plinth font-mono">{otherEntity?.name || other}</span>
+              <span className="text-accent-compass font-mono">{otherEntity?.name || other}</span>
               <span className="text-slate-400 text-[9px] font-mono">({r.type})</span>
             </div>
           );
@@ -161,7 +161,7 @@ export default function DataModelPage() {
     <div className="max-w-7xl mx-auto px-6 py-16">
       {/* Header */}
       <div className="mb-10">
-        <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent-armature">
+        <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent-blueprint">
           Platform Architecture
         </span>
         <h1 className="text-3xl font-bold tracking-tight mt-2 mb-2 text-gradient">
@@ -182,7 +182,7 @@ export default function DataModelPage() {
             { label: "Layers", value: LAYERS.length },
           ].map((s) => (
             <div key={s.label} className="flex flex-col">
-              <span className="font-mono text-xl font-bold text-accent-armature">{s.value}</span>
+              <span className="font-mono text-xl font-bold text-accent-blueprint">{s.value}</span>
               <span className="text-[10px] text-slate-500 uppercase tracking-wider">{s.label}</span>
             </div>
           ))}
@@ -227,7 +227,7 @@ export default function DataModelPage() {
         {selected && (
           <div className="sticky top-20 self-start rounded-xl p-5 border border-slate-200 max-h-[calc(100vh-6rem)] overflow-y-auto bg-white shadow-sm">
             <div className="flex justify-between items-start mb-1">
-              <h3 className="m-0 font-mono text-lg font-bold text-accent-armature">{selected.name}</h3>
+              <h3 className="m-0 font-mono text-lg font-bold text-accent-blueprint">{selected.name}</h3>
               <button
                 onClick={() => setSelectedEntity(null)}
                 className="bg-white border border-slate-200 rounded px-2 py-0.5 text-slate-500 cursor-pointer font-mono text-xs hover:text-slate-800 hover:border-slate-300"

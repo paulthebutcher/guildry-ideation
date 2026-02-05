@@ -6,13 +6,13 @@ function RepoTree() {
     <div className="font-mono text-xs">
       {/* Root */}
       <div className="text-slate-700 mb-3">
-        <span className="text-accent-armature font-semibold">/</span>
+        <span className="text-accent-blueprint font-semibold">/</span>
         <span className="text-slate-500 ml-2">monorepo root (Turborepo + pnpm)</span>
       </div>
 
       {/* Shared */}
       <div className="mb-5 pl-4 border-l-2 border-slate-200">
-        <div className="text-accent-armature font-semibold mb-2">/shared</div>
+        <div className="text-accent-blueprint font-semibold mb-2">/shared</div>
         {REPO_STRUCTURE.shared.map((item, i) => (
           <div key={i} className="flex items-start gap-3 py-1 pl-4">
             <span className="text-slate-500 shrink-0">{item.path}</span>
@@ -24,7 +24,7 @@ function RepoTree() {
 
       {/* Products */}
       <div className="pl-4 border-l-2 border-slate-200">
-        <div className="text-accent-plinth font-semibold mb-2">/products</div>
+        <div className="text-accent-compass font-semibold mb-2">/products</div>
         {REPO_STRUCTURE.products.map((prod) => {
           const color = PRODUCTS[prod.key]?.color;
           return (
@@ -53,7 +53,7 @@ function TechDecision({ title, chosen, alternatives, reasoning }) {
     <div className="rounded-lg p-4 border border-slate-200 bg-white">
       <h4 className="font-mono text-xs font-semibold text-slate-800 m-0 mb-2">{title}</h4>
       <div className="flex items-center gap-2 mb-2">
-        <span className="font-mono text-[11px] px-2 py-0.5 rounded text-accent-armature bg-teal-50 border border-teal-200">
+        <span className="font-mono text-[11px] px-2 py-0.5 rounded text-accent-blueprint bg-teal-50 border border-teal-200">
           {chosen}
         </span>
         {alternatives.map((alt, i) => (
@@ -91,7 +91,7 @@ export default function ArchitecturePage() {
           {ARCHITECTURE_PRINCIPLES.map((p, i) => (
             <div key={i} className="rounded-xl p-5 border border-slate-200 bg-slate-50">
               <div className="flex items-center gap-2 mb-2">
-                <span className="text-accent-armature text-sm">{p.icon}</span>
+                <span className="text-accent-blueprint text-sm">{p.icon}</span>
                 <h3 className="font-mono text-xs font-semibold text-accent-secondary m-0">{p.title}</h3>
               </div>
               <p className="text-xs text-slate-600 leading-relaxed m-0">{p.desc}</p>
@@ -214,11 +214,11 @@ export default function ArchitecturePage() {
         <div className="rounded-xl p-6 border border-slate-200 bg-slate-50">
           <div className="font-mono text-xs text-slate-600 leading-relaxed space-y-3">
             <p className="m-0">
-              <span className="text-accent-armature font-semibold">org_id</span> is the partition key on every entity.
+              <span className="text-accent-blueprint font-semibold">org_id</span> is the partition key on every entity.
               All queries are scoped by org. Prisma middleware enforces this — no query can execute without an org context.
             </p>
             <p className="m-0">
-              <span className="text-accent-plinth font-semibold">Row-level security</span> in Postgres as a second layer.
+              <span className="text-accent-compass font-semibold">Row-level security</span> in Postgres as a second layer.
               Even if the application layer has a bug, the database won&apos;t return cross-tenant data.
             </p>
             <p className="m-0">

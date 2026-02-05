@@ -86,7 +86,7 @@ export default function RoadmapPage() {
     <div className="max-w-4xl mx-auto px-6 py-16">
       {/* Header */}
       <div className="mb-10">
-        <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent-signal">
+        <span className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent-scout">
           Implementation Plan
         </span>
         <h1 className="text-3xl font-bold tracking-tight mt-2 mb-2 text-gradient-warm">
@@ -146,7 +146,7 @@ export default function RoadmapPage() {
               {
                 gate: "Gate 1: Core Loop PMF",
                 week: "Week 10",
-                criteria: "5+ freelancers use Blueprint + Bench + Retro on real projects. At least 2 report that their next estimate was more accurate because of Retro data.",
+                criteria: "3+ firms (50-100 employees) use Blueprint + Bench + Retro on real projects. At least 2 report that their next estimate was more accurate because of Retro data.",
                 ifNo: "The feedback loop isn't clicking. Interview users to find where the chain breaks. May need to narrow to a single vertical (e.g., web dev agencies only).",
               },
               {
