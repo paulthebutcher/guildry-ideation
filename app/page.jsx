@@ -216,7 +216,7 @@ export default function HomePage() {
           {[
             { href: "/data-model", title: "Data Model", desc: "17 entities, 7 layers", color: "#0d9488" },
             { href: "/products", title: "Products", desc: "Briefs for all 7 products", color: "#4f46e5" },
-            { href: "/architecture", title: "Architecture", desc: "Repo structure & principles", color: "#dc2626" },
+            { href: "/challenges", title: "Challenges", desc: "Design problems to solve", color: "#db2777" },
             { href: "/roadmap", title: "Roadmap", desc: "6-month phased plan", color: "#b45309" },
           ].map((link) => (
             <Link
