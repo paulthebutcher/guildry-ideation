@@ -214,8 +214,8 @@ export default function HomePage() {
         </h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           {[
-            { href: "/data-model", title: "Data Model", desc: "17 entities, 7 layers", color: "#0d9488" },
             { href: "/products", title: "Products", desc: "Briefs for all 7 products", color: "#4f46e5" },
+            { href: "/system/ai", title: "AI System", desc: "How the AI layer works", color: "#0d9488" },
             { href: "/challenges", title: "Challenges", desc: "Design problems to solve", color: "#db2777" },
             { href: "/roadmap", title: "Roadmap", desc: "6-month phased plan", color: "#b45309" },
           ].map((link) => (
