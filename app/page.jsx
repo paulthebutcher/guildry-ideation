@@ -175,6 +175,133 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* The Problem Today */}
+      <section className="mb-20">
+        <h2 className="font-mono text-[11px] uppercase tracking-[0.15em] text-slate-500 mb-6">
+          The Problem Today
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6">
+          {[
+            {
+              tool: "Project management",
+              examples: "Monday, Asana, Notion",
+              gap: "Tracks tasks, not project economics. No connection between what you scoped and what you delivered. Learning stays in your head.",
+            },
+            {
+              tool: "Time tracking",
+              examples: "Harvest, Toggl, Clockify",
+              gap: "Records hours but doesn't analyze them. You know you went over budget — but not why, or how to prevent it next time.",
+            },
+            {
+              tool: "PSA suites",
+              examples: "Kantata, Accelo, Teamwork",
+              gap: "Enterprise-grade, enterprise-priced, enterprise-complex. 6-month implementations. Built for compliance, not intelligence.",
+            },
+          ].map((item, i) => (
+            <div key={i} className="rounded-xl p-5 border border-slate-200 bg-white">
+              <div className="font-mono text-xs font-semibold text-slate-800 mb-1">{item.tool}</div>
+              <div className="text-[10px] text-slate-400 mb-3 font-mono">{item.examples}</div>
+              <p className="text-xs text-slate-600 leading-relaxed m-0">{item.gap}</p>
+            </div>
+          ))}
+        </div>
+        <div className="p-4 rounded-xl border border-amber-200 bg-amber-50">
+          <p className="text-sm text-amber-800 m-0">
+            <strong>The common thread:</strong> These tools capture data but don't learn from it.
+            Your 100th project estimate is no more accurate than your 10th — because the system has no memory.
+          </p>
+        </div>
+      </section>
+
+      {/* Why Now */}
+      <section className="mb-20">
+        <h2 className="font-mono text-[11px] uppercase tracking-[0.15em] text-slate-500 mb-6">
+          Why Now
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          {[
+            {
+              title: "LLMs changed the input layer",
+              body: "Before 2023, building a system that understands 'it's a medium-sized redesign, maybe 8 weeks' required years of NLP work. Now Claude can extract structured project data from natural language in seconds. The conversational interface is suddenly viable.",
+            },
+            {
+              title: "Services firms are data-rich but insight-poor",
+              body: "Every agency has years of SOWs, time logs, and retro notes buried in Google Drive. The data exists — it's just never been connected. LLMs can parse unstructured history and bootstrap the learning model from day one.",
+            },
+            {
+              title: "The tool stack is fragmenting",
+              body: "Firms now use 5-10 tools for what used to be one PSA suite. Each tool is best-in-class at its job but siloed from the others. There's an opportunity for a layer that connects them — not replaces them.",
+            },
+            {
+              title: "Remote work raised the stakes",
+              body: "Distributed teams can't rely on hallway knowledge transfer. 'Ask Sarah, she did a project like this' doesn't work when Sarah is in a different timezone. Institutional knowledge needs to live in the system.",
+            },
+          ].map((item, i) => (
+            <div key={i} className="rounded-xl p-5 border border-slate-200 bg-slate-50">
+              <h3 className="font-mono text-sm font-semibold text-accent-scout mb-2 mt-0">{item.title}</h3>
+              <p className="text-xs text-slate-600 leading-relaxed m-0">{item.body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* The Math */}
+      <section className="mb-20">
+        <h2 className="font-mono text-[11px] uppercase tracking-[0.15em] text-slate-500 mb-6">
+          The Math
+        </h2>
+        <div className="rounded-xl border border-slate-200 overflow-hidden">
+          <div className="p-6 bg-slate-50 border-b border-slate-200">
+            <p className="text-sm text-slate-600 m-0">
+              For a 75-person agency doing $10M in annual revenue across ~50 projects:
+            </p>
+          </div>
+          <div className="p-6 bg-white">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
+                {
+                  metric: "Estimation accuracy",
+                  before: "±30% variance",
+                  after: "±15% variance",
+                  impact: "On a $200K average project, that's $30K less overrun risk per project.",
+                  value: "$1.5M/year",
+                },
+                {
+                  metric: "Scoping time",
+                  before: "8 hours per SOW",
+                  after: "2 hours per SOW",
+                  impact: "At $150/hr blended rate, that's $900 saved per project.",
+                  value: "$45K/year",
+                },
+                {
+                  metric: "Retro capture rate",
+                  before: "20% of projects",
+                  after: "80% of projects",
+                  impact: "4x more learning data means estimates improve 4x faster.",
+                  value: "Compounds",
+                },
+              ].map((item, i) => (
+                <div key={i} className="text-center">
+                  <div className="font-mono text-[10px] text-slate-500 uppercase tracking-wider mb-2">{item.metric}</div>
+                  <div className="flex items-center justify-center gap-2 mb-2">
+                    <span className="text-xs text-slate-400 line-through">{item.before}</span>
+                    <span className="text-slate-400">→</span>
+                    <span className="text-xs text-teal-700 font-semibold">{item.after}</span>
+                  </div>
+                  <p className="text-[11px] text-slate-500 mb-2 m-0">{item.impact}</p>
+                  <div className="font-mono text-lg font-bold text-accent-blueprint">{item.value}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+          <div className="p-4 bg-teal-50 border-t border-teal-200">
+            <p className="text-sm text-teal-800 m-0 text-center">
+              <strong>Conservative estimate:</strong> 10-20x ROI in year one. The value compounds as the model learns.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Why It Works */}
       <section className="mb-20">
         <h2 className="font-mono text-[11px] uppercase tracking-[0.15em] text-slate-500 mb-6">
@@ -202,6 +329,121 @@ export default function HomePage() {
             <div key={i} className="rounded-xl p-5 border border-slate-200 bg-slate-50">
               <h3 className="font-mono text-sm font-semibold text-accent-secondary mb-2 mt-0">{item.title}</h3>
               <p className="text-xs text-slate-600 leading-relaxed m-0">{item.body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Integrations */}
+      <section className="mb-20">
+        <h2 className="font-mono text-[11px] uppercase tracking-[0.15em] text-slate-500 mb-6">
+          Integrations
+        </h2>
+        <div className="rounded-xl border border-slate-200 p-6 bg-slate-50">
+          <p className="text-sm text-slate-600 mb-4 m-0">
+            Guildry doesn't replace your existing tools — it learns from them. Planned integrations:
+          </p>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {[
+              { category: "Project tracking", tools: "Asana, Monday, Notion, Linear, Jira" },
+              { category: "Time & billing", tools: "Harvest, Toggl, Clockify, QuickBooks" },
+              { category: "Communication", tools: "Slack, Gmail, Google Calendar" },
+              { category: "Documents", tools: "Google Drive, Dropbox, SharePoint" },
+            ].map((item, i) => (
+              <div key={i} className="p-3 rounded-lg bg-white border border-slate-200">
+                <div className="font-mono text-[10px] text-slate-500 uppercase tracking-wider mb-1">{item.category}</div>
+                <div className="text-xs text-slate-700">{item.tools}</div>
+              </div>
+            ))}
+          </div>
+          <p className="text-xs text-slate-500 mt-4 m-0">
+            Integration priority will be based on early customer feedback. What do you use?
+          </p>
+        </div>
+      </section>
+
+      {/* Day One */}
+      <section className="mb-20">
+        <h2 className="font-mono text-[11px] uppercase tracking-[0.15em] text-slate-500 mb-6">
+          Day One Experience
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+          {[
+            {
+              step: "1",
+              title: "Connect your tools",
+              desc: "Link your project tracker, time tracker, and document storage. We'll scan for historical project data.",
+              time: "15 min",
+            },
+            {
+              step: "2",
+              title: "Import past work",
+              desc: "Upload SOWs, proposals, and retro notes. The AI parses them into structured project records.",
+              time: "30 min",
+            },
+            {
+              step: "3",
+              title: "Scope your first project",
+              desc: "Tell the system about an upcoming project. It suggests estimates based on your imported history.",
+              time: "20 min",
+            },
+            {
+              step: "4",
+              title: "See the flywheel",
+              desc: "As you close projects and run retros, watch the estimates get more accurate over time.",
+              time: "Ongoing",
+            },
+          ].map((item, i) => (
+            <div key={i} className="rounded-xl p-5 border border-slate-200 bg-white relative">
+              <div className="absolute -top-3 -left-2 w-7 h-7 rounded-full bg-accent-blueprint flex items-center justify-center">
+                <span className="font-mono text-xs font-bold text-white">{item.step}</span>
+              </div>
+              <h3 className="font-mono text-xs font-semibold text-slate-800 mb-2 mt-2">{item.title}</h3>
+              <p className="text-[11px] text-slate-600 leading-relaxed m-0 mb-2">{item.desc}</p>
+              <div className="font-mono text-[10px] text-slate-400">{item.time}</div>
+            </div>
+          ))}
+        </div>
+        <p className="text-xs text-slate-500 mt-4 text-center">
+          Target: useful estimates within the first hour. Value compounds from there.
+        </p>
+      </section>
+
+      {/* FAQ */}
+      <section className="mb-20">
+        <h2 className="font-mono text-[11px] uppercase tracking-[0.15em] text-slate-500 mb-6">
+          Common Questions
+        </h2>
+        <div className="space-y-3">
+          {[
+            {
+              q: "How is this different from [Monday/Asana/Notion]?",
+              a: "Those tools track tasks. Guildry tracks project economics — and learns from them. Think of it as a layer that sits on top of your existing stack and adds intelligence.",
+            },
+            {
+              q: "Do I have to replace my current tools?",
+              a: "No. Guildry integrates with your existing tools and learns from the data they capture. You keep using what works; we add the learning layer.",
+            },
+            {
+              q: "How long until it's actually useful?",
+              a: "With historical data import, you can get useful estimates in hour one. Without history, you'll need 5-10 closed projects for the model to calibrate. We're designing the onboarding to front-load value.",
+            },
+            {
+              q: "What about data privacy?",
+              a: "SOWs and project data are sensitive. We're designing for strict tenant isolation from day one. Enterprise customers will have options for dedicated infrastructure. More details in the Challenges section.",
+            },
+            {
+              q: "Is this AI-generated fluff?",
+              a: "The AI handles input (natural language → structured data) and synthesis (data → insights). The core value — your historical project data and the patterns in it — is real and yours. The AI accelerates; it doesn't fabricate.",
+            },
+            {
+              q: "Why not just use a spreadsheet?",
+              a: "You could. Many firms do. But spreadsheets don't learn, don't integrate, and don't scale with you. If your spreadsheet system is working, you're probably not the target market — yet.",
+            },
+          ].map((item, i) => (
+            <div key={i} className="rounded-xl p-5 border border-slate-200 bg-white">
+              <h3 className="font-mono text-xs font-semibold text-slate-800 mb-2 mt-0">{item.q}</h3>
+              <p className="text-xs text-slate-600 leading-relaxed m-0">{item.a}</p>
             </div>
           ))}
         </div>
